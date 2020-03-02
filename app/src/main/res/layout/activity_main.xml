@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/empty_dice"
-        tools:src="@drawable/dice_1"/>
-        <!-- tools namespace to define dummy content for previewing.
-        Removed when the app is compiled. -->
+        tools:src="@drawable/dice_1" />
+    <!-- tools namespace to define dummy content for previewing.
+    Removed when the app is compiled. -->
 
     <Button
         android:id="@+id/roll_button"

@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.osaigbovo.diceroller.databinding.ActivityMainBinding
 import java.util.*
 
-// TODO 1 - Testing
 class MainActivity : AppCompatActivity() {
 
     // lateinit - the variable will be initialised before calling any operations on it.
@@ -31,9 +30,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        //val resultText: TextView = findViewById(R.id.result_text)
-        //val randomInt = Random().nextInt(6) + 1
-        //resultText.text = randomInt.toString()
 
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
@@ -44,10 +40,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-
         binding.diceImage.setImageResource(drawableResource)
-
     }
-
 
 }
