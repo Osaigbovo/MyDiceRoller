@@ -4,27 +4,28 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.osaigbovo.diceroller.databinding.ActivityMainBinding
 import java.util.*
 
 // TODO 1 - Testing
 class MainActivity : AppCompatActivity() {
 
     // lateinit - the variable will be initialised before calling any operations on it.
-    lateinit var diceImage: ImageView
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        // Dice Image
-        diceImage = findViewById(R.id.dice_image)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        val rollButton: Button = findViewById(R.id.roll_button)
-        rollButton.text = "Let's Roll!"
-        rollButton.setOnClickListener {
-            //Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show()
+        binding.rollButton.text = "Let's Roll!"
+        binding.rollButton.setOnClickListener {
             rollDice()
+            Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
 
-        diceImage.setImageResource(drawableResource)
+        binding.diceImage.setImageResource(drawableResource)
 
     }
 
