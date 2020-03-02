@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 // TODO 1 - Testing
-// TODO 2 - Use ViewBinding
 class MainActivity : AppCompatActivity() {
 
     // lateinit - the variable will be initialised before calling any operations on it.
